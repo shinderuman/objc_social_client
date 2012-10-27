@@ -30,13 +30,18 @@
 - (void) push
 {
     SLComposeViewController *controller;
-    // 0 = twitter
-    if (seg.selectedSegmentIndex == 0) {
-        controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    // 1 = facebook
-    } else if (seg.selectedSegmentIndex == 1) {
-        controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    } else {
+    switch (seg.selectedSegmentIndex) {
+        // 0 = twitter
+        case 0:
+            controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            break;
+        // 1 = facebook
+        case 1:
+            controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            break;
+        default:
+            break;
     }
-    [self presentViewController:controller animated:YES completion:nil];}
+    [self presentViewController:controller animated:YES completion:nil];
+}
 @end
