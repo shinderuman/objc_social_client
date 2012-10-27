@@ -19,6 +19,7 @@
 		B097C07D163BD55A00334274 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B097C07B163BD55A00334274 /* MainStoryboard_iPhone.storyboard */; };
 		B097C080163BD55A00334274 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B097C07E163BD55A00334274 /* MainStoryboard_iPad.storyboard */; };
 		B097C083163BD55A00334274 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B097C082163BD55A00334274 /* ViewController.m */; };
+		B097C08A163BDC0200334274 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B097C089163BDC0200334274 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B097C07F163BD55A00334274 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		B097C081163BD55A00334274 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B097C082163BD55A00334274 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B097C089163BDC0200334274 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B097C08A163BDC0200334274 /* Social.framework in Frameworks */,
 				B097C064163BD55A00334274 /* UIKit.framework in Frameworks */,
 				B097C066163BD55A00334274 /* Foundation.framework in Frameworks */,
 				B097C068163BD55A00334274 /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +61,7 @@
 		B097C054163BD55A00334274 = {
 			isa = PBXGroup;
 			children = (
+				B097C089163BDC0200334274 /* Social.framework */,
 				B097C069163BD55A00334274 /* TwitterClient */,
 				B097C062163BD55A00334274 /* Frameworks */,
 				B097C060163BD55A00334274 /* Products */,
