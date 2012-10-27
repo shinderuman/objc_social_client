@@ -27,6 +27,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) choose {
+    UIImagePickerController* imagePicker;
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.allowsEditing = YES;
+    imagePicker.delegate = self;
+    
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+UIImage *image;
+-(void)imagePickerController:(UIImagePickerController*)picker
+       didFinishPickingImage:(UIImage*)img editingInfo:(NSDictionary*)editingInfo{
+    
+    // モーダルビューを閉じる
+    [self dismissModalViewControllerAnimated:YES];
+    
+    image = img;
+}
+
+- (void) releasePicture {
+    image = nil;
+}
 - (void) push
 {
     SLComposeViewController *controller;
@@ -34,10 +57,12 @@
         // 0 = twitter
         case 0:
             controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [controller addImage:image];
             break;
         // 1 = facebook
         case 1:
             controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [controller addImage:image];
             break;
         default:
             break;

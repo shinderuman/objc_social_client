@@ -24,11 +24,43 @@
                                     <action selector="push" destination="2" eventType="valueChanged" id="RrD-od-c2Q"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-9m-RYt">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose Picture">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choose" destination="2" eventType="touchDown" id="dfc-jI-c93"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LC-jV-wru">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Release Picture">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="releasePicture" destination="2" eventType="touchDown" id="pJV-Wt-XHG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Iu8-eQ-Tzi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FGY-Fg-s72"/>
-                            <constraint firstItem="Iu8-eQ-Tzi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="m28-Ia-ahx"/>
+                            <constraint firstItem="6LC-jV-wru" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B7i-LW-KUY"/>
+                            <constraint firstAttribute="trailing" secondItem="6LC-jV-wru" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EXT-tS-Jnm"/>
+                            <constraint firstAttribute="trailing" secondItem="KZw-9m-RYt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ind-A9-REU"/>
+                            <constraint firstItem="Iu8-eQ-Tzi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="131" id="KRH-nN-pIm"/>
+                            <constraint firstItem="KZw-9m-RYt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LTq-On-n54"/>
+                            <constraint firstItem="6LC-jV-wru" firstAttribute="top" secondItem="3" secondAttribute="top" constant="75" id="ZhQ-34-WeP"/>
+                            <constraint firstItem="KZw-9m-RYt" firstAttribute="top" secondItem="3" secondAttribute="top" constant="19" id="ewA-xh-PYH"/>
+                            <constraint firstItem="Iu8-eQ-Tzi" firstAttribute="centerX" secondItem="6LC-jV-wru" secondAttribute="centerX" type="default" id="zdQ-N7-CXe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -39,6 +71,20 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="choose"/>
+                <relationship kind="action" name="push"/>
+                <relationship kind="action" name="releasePicture"/>
+                <relationship kind="outlet" name="seg" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

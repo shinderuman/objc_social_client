@@ -12,6 +12,8 @@
     IBOutlet UISegmentedControl *seg;
 }
 
+- (IBAction)choose;
+- (IBAction)releasePicture;
 - (IBAction)push;
 
 @end
